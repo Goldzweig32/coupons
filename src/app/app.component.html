@@ -1,3 +1,7 @@
-<div *ngIf="!loggedIn">
+<div *ngIf="!isLoggin()">
   <app-login></app-login>
+</div>
+
+<div *ngIf="isLoggin()">
+  <app-layout></app-layout>
 </div>

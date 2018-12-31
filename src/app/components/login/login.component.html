@@ -5,7 +5,7 @@
    <img id = logoImage src="/assets/images/bigwolf.png" width="imgWidth">
   
   
-  <form #myForm="ngForm" (ngSubmit)="send()">
+  <form #myForm="ngForm" (ngSubmit)="loginMetod()">
 
     <input #name="ngModel" type="email" name="userEmail" [(ngModel)]="login.userEmail" placeholder="Email">
     <br>

@@ -1,6 +1,36 @@
-a{
-    display: block;
-    color:black;
-    font-size: large;
-    margin: 10px;
+#myImage{
+    height: 13%;
+    left: 40px;
+    position: absolute;
+}
+
+#logoImage{
+    width: 13%;
+    top: 100px;
+    left: 10px;
+    position: absolute;
+}
+div.logout {
+    top: 6%;
+    right: 40px;
+    position: absolute;
+}
+
+div.btn-group{
+    position: absolute;
+    top: 0.5%;
+    width: 30%;
+    height: 14%;
+    left: 670px;
+    
+}
+button.btn{
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+}
+
+button.btn-group {
+    border-width: bold;
 }

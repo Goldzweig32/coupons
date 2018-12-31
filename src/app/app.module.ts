@@ -7,10 +7,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { CouponsComponent } from './components/coupons/coupons.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
-   { path: "", redirectTo:"login", pathMatch: "full"},
-   { path: "home", component: LayoutComponent}
+   { path: "", redirectTo:"home", pathMatch: "full"},
+   { path: "home", component: HomeComponent},
+   { path: "coupons", component: CouponsComponent},
+   { path: "about", component: AboutComponent}
 ];
 
 @NgModule({
@@ -18,7 +23,10 @@ const routes: Routes = [
   LoginComponent,
   LayoutComponent,  
   MenuComponent,
-  AppComponent
+  AppComponent,
+  HomeComponent,
+  CouponsComponent,
+  AboutComponent
 ],
   imports: [
     BrowserModule,

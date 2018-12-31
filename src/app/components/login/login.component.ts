@@ -13,6 +13,7 @@ import { LayoutComponent } from '../layout/layout.component';
 })
 export class LoginComponent implements OnInit {
 
+  
   private login: Login = new Login();
 
   constructor(private loginService: LoginService,private title: Title,private router:Router) {
@@ -23,12 +24,22 @@ export class LoginComponent implements OnInit {
     this.title.setTitle("Login");
   }
 
-  public send(): void{
+  public loginMetod(): void{
     let ob = this.loginService.login(this.login);
-    ob.subscribe(userId => alert("user successful login. ID: " + userId.id));
-    this.router.navigate(['/home']);
+    ob.subscribe(userId => {
+      alert("user successful login. ID: " + userId.id);
+      localStorage.setItem('user',JSON.stringify(this.login));
+      localStorage.setItem('isLoggedIn',"true");
+    })
+    
+    // this.router.navigate(['/home']);
     // this.router.navigateByUrl('/home');
     
   }
+ 
+ 
 
+  
 }
+
+
