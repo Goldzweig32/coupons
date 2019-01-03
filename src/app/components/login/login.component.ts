@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   
   private login: Login = new Login();
 
-  constructor(private loginService: LoginService,private title: Title,private router:Router) {
+  constructor(private loginService: LoginService,private title: Title) {
     // this.router.navigate['/login'];
    }
 

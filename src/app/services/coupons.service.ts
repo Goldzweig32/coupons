@@ -14,4 +14,8 @@ export class CouponsService {
   public getCoupons(): Observable<Coupon[]>{
     return this.http.get<Coupon[]>("http://localhost:8080/couponSpringV2/rest/coupons",{ withCredentials: true});
   }
+
+  public createCoupon(coupon: Coupon): void{
+    this.http.post("http://localhost:8080/couponSpringV2/rest/coupons",coupon)
+  }
 }

@@ -12,4 +12,8 @@ export class Coupon {
         private companyId?: number
     ){}
 
+    setStartDate(startDate: Date){
+        this.startDate = JSON.stringify(startDate);
+    } 
+
 }
