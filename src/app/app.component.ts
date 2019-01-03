@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public isLoggin(): boolean{
-    return JSON.parse(localStorage.getItem('isLoggedIn'));
+    return JSON.parse(sessionStorage.getItem('isLoggedIn'));
   }
 }

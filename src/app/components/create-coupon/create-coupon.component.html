@@ -1,0 +1,43 @@
+<div> 
+   
+  <form #myForm="ngForm" (ngSubmit)="loginMetod()">
+ 
+     <input #name="ngModel" type="text" name="couponTitle" [(ngModel)]="coupon.couponTitle" placeholder="Coupon Title">
+     <br>
+ 
+     <input #name="ngModel" type="date" name="startDate" [(ngModel)]="login.userPassword" placeholder="Start">
+     <br>
+ 
+     <select #name="ngModel" [(ngModel)]="login.userType" [ngModelOptions]="{standalone: true}">
+       <option value="VACATION">VACATION</option>
+       <option value="FOOD">FOOD</option>
+       <option value="ELECTRICITY">ELECTRICITY</option>
+       <option value="SPORTS">SPORTS</option>
+       <option value="RESTURANTS">RESTURANTS</option>
+       <option value="HEALTH">HEALTH</option>
+       <option value="CAMPING">CAMPING</option>
+       <option value="TRAVELLING">TRAVELLING</option>
+     </select>
+     <br>
+ 
+     <button>Create Coupon</button>
+ 
+   </form>
+ </div>
+
+     
+		
+		
+  
+ private startDate: string,
+ private endDate: string,
+ private amount: number,
+ private couponType: string,
+ private couponMessage: string,
+ private couponPrice: number,
+ private couponImage: string,
+ private companyId: number
+		
+		
+		
+		

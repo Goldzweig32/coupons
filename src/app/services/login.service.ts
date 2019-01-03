@@ -12,6 +12,6 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   public login(login: Login): Observable<UserId>{
-    return this.http.post<UserId>("http://localhost:8080/couponSpringV2/rest/login",login);
+    return this.http.post<UserId>("http://localhost:8080/couponSpringV2/rest/login",login,{ withCredentials: true});
   }
 }

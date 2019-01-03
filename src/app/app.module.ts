@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CouponsComponent } from './components/coupons/coupons.component';
 import { AboutComponent } from './components/about/about.component';
+import { CreateCouponComponent } from './components/create-coupon/create-coupon.component';
 
 const routes: Routes = [
    { path: "", redirectTo:"home", pathMatch: "full"},
    { path: "home", component: HomeComponent},
    { path: "coupons", component: CouponsComponent},
+   { path: "createCoupon", component: CreateCouponComponent},
    { path: "about", component: AboutComponent}
 ];
 
@@ -26,7 +28,8 @@ const routes: Routes = [
   AppComponent,
   HomeComponent,
   CouponsComponent,
-  AboutComponent
+  AboutComponent,
+  CreateCouponComponent
 ],
   imports: [
     BrowserModule,

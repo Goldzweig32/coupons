@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   }
   
   public logout():void {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('user');
+    sessionStorage.removeItem('isLoggedIn');
+    sessionStorage.removeItem('user');
   }
 }
