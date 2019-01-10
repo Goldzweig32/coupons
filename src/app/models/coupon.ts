@@ -1,4 +1,5 @@
 export class Coupon {
+    
     public constructor(
         private couponId?: number,
         private couponTitle?: string,
@@ -12,8 +13,18 @@ export class Coupon {
         private companyId?: number
     ){}
 
-    setStartDate(startDate: Date){
-        this.startDate = JSON.stringify(startDate);
+    public setStartDate(startDate: string){
+        this.startDate = startDate;
     } 
+
+    public setEndDate(endDate: string){
+        this.endDate = endDate;
+    } 
+
+    public setCompanyId(id: number){
+        this.companyId = id;
+    }
+
+    
 
 }

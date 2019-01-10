@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     let ob = this.loginService.login(this.login);
     ob.subscribe(userId => {
       alert("user successful login. ID: " + userId.id);
+      sessionStorage.setItem('id',JSON.stringify(userId.id));
       sessionStorage.setItem('user',JSON.stringify(this.login));
       sessionStorage.setItem('isLoggedIn',"true");
     })

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Coupon } from 'src/app/models/coupon';
 import { Title } from '@angular/platform-browser';
 import { CouponsService } from 'src/app/services/coupons.service';
+import { MyDate } from 'src/app/models/my-date';
 
 @Component({
   selector: 'app-create-coupon',
@@ -11,22 +12,25 @@ import { CouponsService } from 'src/app/services/coupons.service';
 export class CreateCouponComponent implements OnInit {
 
   private coupon: Coupon = new Coupon(); 
-  private eDate: Date;
+  private date: MyDate = new MyDate();
 
   constructor(private title: Title, private couponsService: CouponsService) { }
 
   ngOnInit() {
     this.title.setTitle("Create Coupon");
-    let dateFormat = require('dateformat');
-    let now = new Date;
-    dateFormat(now,"dd.mm.yy");
-    this.coupon.setStartDate(now);
+    let now = new Date();
+    this.date.setDay(now.getUTCDate()); 
+    this.date.setMonth(now.getMonth()+1);
+    this.date.setYear(now.getUTCFullYear());
+    this.coupon.setStartDate(this.date.toString());
+    this.coupon.setCompanyId(parseInt(sessionStorage.getItem('id')));
+
+
   }
   
-
   public createCoupon(): void{
-    this 
-    let ob = this.couponsService.createCoupon(this.coupon);
-      alert("Coupon created successfully.");
+    alert("hi");
+    this.couponsService.createCoupon(this.coupon).subscribe(coupon => alert("Coupon created successfully."));
+    alert("hi");
   }
 }

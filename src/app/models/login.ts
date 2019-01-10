@@ -4,4 +4,6 @@ export class Login {
         public userPassword?: string,
         public userType?: string
     ){}
+
+   
 }

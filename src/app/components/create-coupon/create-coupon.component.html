@@ -5,7 +5,7 @@
      <input #name="ngModel" type="text" name="couponTitle" [(ngModel)]="coupon.couponTitle" placeholder="Coupon Title">
      <br>
  
-     <input #name="ngModel" type="date" name="endDate" [(ngModel)]="eDate" placeholder="Expiration Date">
+     <input #name="ngModel" type="text" name="endDate" [(ngModel)]="coupon.endDate" placeholder="dd.mm.yyyy">
      <br>
  
      <input #name="ngModel" type="number" name="amount" [(ngModel)]="coupon.amount" placeholder="Amount">
@@ -35,6 +35,8 @@
      <button>Create Coupon</button>
  
    </form>
+   {{coupon | json}}
+
  </div>
 
 
