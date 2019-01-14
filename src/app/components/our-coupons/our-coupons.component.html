@@ -1,0 +1,31 @@
+<h2 *ngIf="allCoupons">{{ allCoupons.length }} Coupons</h2>
+
+<div *ngIf="allCoupons">
+<table class="table table-striped table-dark">
+  <tr>
+    <th scope="col">couponId</th>
+    <th scope="col">couponTitle</th>
+    <th scope="col">startDate</th>
+    <th scope="col">endDate</th>
+    <th scope="col">amount</th>
+    <th scope="col">couponType</th>
+    <th scope="col">couponMessage</th>
+    <th scope="col">couponImage</th>
+    <th scope="col">companyId</th>
+  </tr>
+    <tr *ngFor="let coupon of allCoupons">
+        <td scope="row">{{ coupon.couponId }}</td>
+        <td>{{ coupon.couponTitle }}</td>
+        <td>{{ coupon.startDate }}</td>
+        <td>{{ coupon.endDate }}</td>
+        <td>{{ coupon.amount }}</td>
+        <td>{{ coupon.couponType }}</td>
+        <td>{{ coupon.couponMessage }}</td>
+        <td>{{ coupon.couponImage }}</td>
+        <td>{{ coupon.companyId }}</td>
+        
+    </tr>
+        
+
+    </table>
+</div>

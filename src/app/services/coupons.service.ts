@@ -9,16 +9,47 @@ import { Coupon } from '../models/coupon';
 })
 export class CouponsService {
 
+  private url = "http://localhost:8080/couponSpringV2/rest/coupons";
+
   constructor(private http: HttpClient) { }
 
+  public createCoupon(coupon: Coupon): Observable<Coupon>{
+    return this.http.post<Coupon>(this.url,coupon,{ withCredentials: true});
+  }
+
+  public purchaseCoupon(id:number):Observable<Coupon>{
+    return this.http.post<Coupon>(this.url + "/purchaseCoupon?id=" + id,{ withCredentials: true});
+  }
+
+  public deleteCoupon(id:number):Observable<Coupon>{
+    return this.http.delete<Coupon>(this.url + "/coupons?id=" + id,{ withCredentials: true});
+  }
+
+  public updateCoupon(coupon: Coupon):Observable<Coupon>{
+    return this.http.put<Coupon>(this.url,coupon,{ withCredentials: true});
+  }
 
   public getCoupons(): Observable<Coupon[]>{
-    return this.http.get<Coupon[]>("http://localhost:8080/couponSpringV2/rest/coupons",{ withCredentials: true});
+    return this.http.get<Coupon[]>(this.url,{ withCredentials: true});
   }
 
-  public createCoupon(coupon: Coupon): Observable<Coupon>{
-    alert(JSON.stringify(coupon));
-    return this.http.post<Coupon>("http://localhost:8080/couponSpringV2/rest/coupons",coupon,{ withCredentials: true});
+  public getCoupon(id:number):Observable<Coupon>{
+    return this.http.get<Coupon>(this.url + "/showCoupon?id=" + id,{ withCredentials: true});
   }
-  
+
+  public getCouponsByType(couponType: string):Observable<Coupon[]>{
+    return this.http.get<Coupon[]>(this.url + "/showCouponsByType?couponType=" + couponType,{ withCredentials: true});
+  }
+
+  public getCouponsUpToPrice(price: number):Observable<Coupon[]>{
+    return this.http.get<Coupon[]>(this.url + "/showCouponsUpToPrice?price=" + price,{ withCredentials: true});
+  }
+
+  public getCouponsUpToDate(couponEndDate: string):Observable<Coupon[]>{
+    return this.http.get<Coupon[]>(this.url + "/getCouponsUpToDate?couponEndDate=" + couponEndDate,{ withCredentials: true});
+  }
+
+  public getCouponsByCustomerId(customerId: number):Observable<Coupon[]>{
+    return this.http.get<Coupon[]>(this.url + "/showCouponsByCustomer?customerId=" + customerId,{ withCredentials: true});
+  }
 }
