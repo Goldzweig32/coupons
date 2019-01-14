@@ -11,12 +11,17 @@
 
 
 
+/* #regComp{
+    top: 650px;
+    left: 960px;
+    width: 10%;
+    position: absolute;
+} */
+
 div{
     height: 100%;
     background-image: url("/assets/images/background.jpg");
 }
-
-
 
 form{
     
@@ -25,6 +30,7 @@ form{
     position: absolute;
 
 }
+
 
 input, button, select {
     width: 400px;

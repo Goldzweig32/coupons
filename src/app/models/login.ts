@@ -5,5 +5,9 @@ export class Login {
         public userType?: string
     ){}
 
+    public getUserType():string{
+        return this.userType;
+
+    }
    
 }
