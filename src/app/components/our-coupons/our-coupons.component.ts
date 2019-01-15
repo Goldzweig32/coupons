@@ -17,9 +17,8 @@ export class OurCouponsComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle("Our Coupons");
-    let id = sessionStorage.getItem("id");
-    let idNumber = +id;
-    this.couponsService.getCoupons().subscribe(coupons => this.ourCoupons = coupons);
+    let id = parseInt(sessionStorage.getItem("id"));
+    this.couponsService.getCouponsByCompany(id).subscribe(coupons => this.ourCoupons = coupons);
   }
 
 }

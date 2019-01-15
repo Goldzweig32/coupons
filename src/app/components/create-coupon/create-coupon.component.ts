@@ -29,8 +29,6 @@ export class CreateCouponComponent implements OnInit {
   }
   
   public createCoupon(): void{
-    alert("hi");
-    this.couponsService.createCoupon(this.coupon).subscribe(coupon => alert("Coupon created successfully."));
-    alert("hi");
+    this.couponsService.createCoupon(this.coupon).subscribe(coupon => alert("Coupon created successfully."));   
   }
 }

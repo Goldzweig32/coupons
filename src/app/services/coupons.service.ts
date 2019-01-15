@@ -52,4 +52,8 @@ export class CouponsService {
   public getCouponsByCustomerId(customerId: number):Observable<Coupon[]>{
     return this.http.get<Coupon[]>(this.url + "/showCouponsByCustomer?customerId=" + customerId,{ withCredentials: true});
   }
+
+  public getCouponsByCompany(companyId: number):Observable<Coupon[]>{
+    return this.http.get<Coupon[]>(this.url + "/showCouponsByCompany?customerId=" + companyId,{ withCredentials: true});
+  }
 }
