@@ -1,0 +1,12 @@
+h2{color: darkblue; font-weight: bold; }
+/* table, th, td { border: 1px solid darkblue; } */
+table{ margin: auto; width: 100%; }
+/* tr:nth-of-type(even) { background-color: lightsteelblue; }
+tr:nth-of-type(odd) { background-color: ; } */
+tr:first-of-type { background-color: gray; }
+div {
+    height: 80%;
+    overflow: auto;
+    width: 60%;
+    margin:auto;
+}

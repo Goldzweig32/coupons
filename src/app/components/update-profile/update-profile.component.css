@@ -1,0 +1,33 @@
+
+div{
+    height: 100%;
+    /* background-image: url("/assets/images/background.jpg"); */
+}
+
+form{
+    
+    left: 750px;
+    top: 200px;
+    position: absolute;
+
+}
+
+input, button, select {
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+}
+
+span {
+    margin: 10px;
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+}
+
+
+.ng-invalid.ng-dirty:not(form){
+    background-color: pink;
+    border: 2px solid red;
+}

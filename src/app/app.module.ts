@@ -12,6 +12,7 @@ import { CouponsComponent } from './components/coupons/coupons.component';
 import { AboutComponent } from './components/about/about.component';
 import { CreateCouponComponent } from './components/create-coupon/create-coupon.component';
 import { OurCouponsComponent } from './components/our-coupons/our-coupons.component';
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 
 const routes: Routes = [
    { path: "", redirectTo:"home", pathMatch: "full"},
@@ -19,8 +20,10 @@ const routes: Routes = [
    { path: "coupons", component: CouponsComponent},
    { path: "createCoupon", component: CreateCouponComponent},
    { path: "OurCoupons", component: OurCouponsComponent},
+   { path: "UpdateProfile", component: UpdateProfileComponent},
    { path: "about", component: AboutComponent}
 ];
+
 
 @NgModule({
   declarations: [ 
@@ -32,7 +35,8 @@ const routes: Routes = [
   CouponsComponent,
   AboutComponent,
   CreateCouponComponent,
-  OurCouponsComponent
+  OurCouponsComponent,
+  UpdateProfileComponent
 ],
   imports: [
     BrowserModule,

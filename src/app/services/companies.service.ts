@@ -29,7 +29,7 @@ export class CompaniesService {
   }
 
   public getCompany(id:number):Observable<Company>{
-    return this.http.get<Company>(this.url + "/showCompany?id=" + id,{ withCredentials: true});
+    return this.http.get<Company>(this.url + "/showCompany/" + id,{ withCredentials: true});
   }
 
  }

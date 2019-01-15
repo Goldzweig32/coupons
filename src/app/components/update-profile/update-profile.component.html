@@ -1,0 +1,37 @@
+<div> 
+   <h2>Company Number: {{ company.companyId }}</h2>
+  <form #myForm="ngForm" (ngSubmit)="updateCompany()">
+ 
+     <a>Company Name:</a>
+     <input #name="ngModel" type="text" name="companyName" [(ngModel)]="company.companyName" placeholder="Company Name">
+     <br>
+
+     <a>Company Password:</a>
+     <input #name="ngModel" type="text" name="companyPassword" [(ngModel)]="company.companyPassword" placeholder="companyPassword">
+     <br>
+
+      <a>Company Email:</a>
+     <input #name="ngModel" type="text" name="companyEmail" [(ngModel)]="company.companyEmail" placeholder="Company Email">
+     <br>
+
+     <a>Company Status:</a>
+     <select #name="ngModel" [(ngModel)]="company.companyStatus" [ngModelOptions]="{standalone: true}">
+      <option value="active">Active</option>
+      <option value="deactivate">Deactivate</option>
+    </select>
+    <br>
+
+     <button>Update</button>
+ 
+   </form>
+ </div>
+
+
+
+
+ 
+ 
+		
+		
+		
+		
