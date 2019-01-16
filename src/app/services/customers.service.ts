@@ -12,9 +12,9 @@ export class CustomersService {
 
   constructor(private http: HttpClient) { }
 
-  public registerCustomer(customer: Customer): Observable<Customer>{
-    return this.http.post<Customer>(this.url,customer,{ withCredentials: true});
-  }
+  // public registerCustomer(customer: Customer): Observable<Customer>{
+  //   return this.http.post<Customer>(this.url,customer,{ withCredentials: true});
+  // }
 
   public deleteCustomer(id:number):Observable<Customer>{
     return this.http.delete<Customer>(this.url + "?id=" + id,{ withCredentials: true});

@@ -1,7 +1,12 @@
 <section>
 
   <header>
-    <app-menu></app-menu>
+    <div *ngIf="isCompany()">
+      <app-menu></app-menu>
+    </div>
+    <div *ngIf="isCustomer()">
+      <app-customer-menu></app-customer-menu>
+    </div>
   </header>
 
   <main>

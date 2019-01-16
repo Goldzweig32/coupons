@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-customer-menu',
+  templateUrl: './customer-menu.component.html',
+  styleUrls: ['./customer-menu.component.css']
 })
-export class MenuComponent implements OnInit {
+export class CustomerMenuComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
-  
   public logout():void {
     sessionStorage.removeItem('isLoggedIn');
     sessionStorage.removeItem('user');
     sessionStorage.removeItem('userType');
   }
+
 }

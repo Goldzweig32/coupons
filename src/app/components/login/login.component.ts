@@ -26,11 +26,13 @@ export class LoginComponent implements OnInit {
   }
 
   public loginMetod(): void{
+    alert("why?");
     let observable = this.loginService.login(this.login);
     observable.subscribe(userId => {
       alert("user successful login. ID: " + userId.id);
       sessionStorage.setItem('id',JSON.stringify(userId.id));
       sessionStorage.setItem('user',JSON.stringify(this.login));
+      sessionStorage.setItem('userType',this.login.getUserType());
       sessionStorage.setItem('isLoggedIn',"true");
     })
      // this.router.navigate(['/home']);
@@ -44,6 +46,7 @@ export class LoginComponent implements OnInit {
       alert("user created successfuly. ID: " + userId.id);
       sessionStorage.setItem('id',JSON.stringify(userId.id));
       sessionStorage.setItem('user',JSON.stringify(this.login));
+      sessionStorage.setItem('userType',this.login.getUserType());
       sessionStorage.setItem('isLoggedIn',"true");
     })
   }

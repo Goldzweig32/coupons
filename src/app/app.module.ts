@@ -13,6 +13,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CreateCouponComponent } from './components/create-coupon/create-coupon.component';
 import { OurCouponsComponent } from './components/our-coupons/our-coupons.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+import { CustomerMenuComponent } from './components/customer-menu/customer-menu.component';
 
 const routes: Routes = [
    { path: "", redirectTo:"home", pathMatch: "full"},
@@ -36,7 +37,8 @@ const routes: Routes = [
   AboutComponent,
   CreateCouponComponent,
   OurCouponsComponent,
-  UpdateProfileComponent
+  UpdateProfileComponent,
+  CustomerMenuComponent
 ],
   imports: [
     BrowserModule,

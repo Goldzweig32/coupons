@@ -12,5 +12,13 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
 
+  public isCompany(): boolean{
+    return (sessionStorage.getItem('userType') == "COMPANY");
+  }
+
+  public isCustomer(): boolean{
+    return (sessionStorage.getItem('userType') == "CUSTOMER");
+  }
+  
   
 }

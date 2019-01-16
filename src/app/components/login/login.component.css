@@ -37,6 +37,14 @@ input, button, select {
     font-size: x-large;
     margin: 10px;
 }
+#regB{
+    position: absolute;
+    left: 750px;
+    top: 665px;
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+}
 
 span {
     margin: 10px;

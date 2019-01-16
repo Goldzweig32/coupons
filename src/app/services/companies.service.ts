@@ -12,9 +12,9 @@ export class CompaniesService {
 
   constructor(private http: HttpClient) { }
 
-  public registerCompany(company: Company): Observable<Company>{
-    return this.http.post<Company>(this.url,company,{ withCredentials: true});
-  }
+  // public registerCompany(company: Company): Observable<Company>{
+  //   return this.http.post<Company>(this.url,company,{ withCredentials: true});
+  // }
 
   public deactivateCompany(id:number):Observable<Company>{
     return this.http.delete<Company>(this.url + "/companies?id=" + id,{ withCredentials: true});
