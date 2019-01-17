@@ -17,16 +17,16 @@ export class LoginComponent implements OnInit {
   
   private login: Login = new Login();
 
-  constructor(private loginService: LoginService,private registerService: RegisterService,private title: Title) {
+  constructor(private loginService: LoginService,private registerService: RegisterService,private title: Title, private router: Router) {
     // this.router.navigate['/login'];
    }
 
   ngOnInit() {
     this.title.setTitle("Login");
+    // this.router.navigate(["/login"]);
   }
 
   public loginMetod(): void{
-    alert("why?");
     let observable = this.loginService.login(this.login);
     observable.subscribe(userId => {
       alert("user successful login. ID: " + userId.id);
@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
   }
   
   public registerMetod(): void{
-    alert(JSON.stringify(this.login));
     let observable = this.registerService.register(this.login);
     observable.subscribe(userId => {
       alert("user created successfuly. ID: " + userId.id);

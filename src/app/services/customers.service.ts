@@ -29,6 +29,6 @@ export class CustomersService {
   }
 
   public getCustomer(id:number):Observable<Customer>{
-    return this.http.get<Customer>(this.url +"/showCustomer?id=" + id,{ withCredentials: true});
+    return this.http.get<Customer>(this.url +"/showCustomer/" + id,{ withCredentials: true});
   }
 }

@@ -7,6 +7,6 @@ tr:first-of-type { background-color: gray; }
 div {
     height: 80%;
     overflow: auto;
-    width: 60%;
+    width: 70%;
     margin:auto;
 }

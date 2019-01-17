@@ -11,6 +11,7 @@
     <h3>{{ coupon.couponMessage }}</h3>
     <h3>Price: {{ coupon.couponPrice }}</h3>
     <h3>Company: {{ coupon.companyId }}</h3>
+    <button type="button" class="btn btn-primary" (click)="purchaseCoupon(coupon.couponId)">Buy</button>
   </div>  
   
 </div>

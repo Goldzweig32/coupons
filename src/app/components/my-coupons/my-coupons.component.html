@@ -1,25 +1,23 @@
-<h2 *ngIf="ourCoupons">{{ ourCoupons.length }} Coupons</h2>
+<h2 *ngIf="myCoupons">{{ myCoupons.length }} Coupons</h2>
 
-<div *ngIf="ourCoupons">
+<div *ngIf="myCoupons">
 <table class="table table-striped table-dark">
   <tr>
     <th scope="col">couponId</th>
     <th scope="col">couponTitle</th>
     <th scope="col">startDate</th>
     <th scope="col">endDate</th>
-    <th scope="col">amount</th>
     <th scope="col">couponType</th>
     <th scope="col">couponMessage</th>
     <th scope="col">couponPrice</th>
     <th scope="col">couponImage</th>
     <th scope="col">companyId</th>
   </tr>
-    <tr *ngFor="let coupon of ourCoupons">
+    <tr *ngFor="let coupon of myCoupons">
         <td scope="row">{{ coupon.couponId }}</td>
         <td>{{ coupon.couponTitle }}</td>
         <td>{{ coupon.startDate }}</td>
         <td>{{ coupon.endDate }}</td>
-        <td>{{ coupon.amount }}</td>
         <td>{{ coupon.couponType }}</td>
         <td>{{ coupon.couponMessage }}</td>
         <td>{{ coupon.couponPrice }}</td>

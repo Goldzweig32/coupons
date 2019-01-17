@@ -1,6 +1,6 @@
-<h2 *ngIf="ourCoupons">{{ ourCoupons.length }} Coupons</h2>
+<h2 *ngIf="allCoupons">{{ allCoupons.length }} Coupons</h2>
 
-<div *ngIf="ourCoupons">
+<div *ngIf="allCoupons">
 <table class="table table-striped table-dark">
   <tr>
     <th scope="col">couponId</th>
@@ -13,8 +13,9 @@
     <th scope="col">couponPrice</th>
     <th scope="col">couponImage</th>
     <th scope="col">companyId</th>
+    <th scope="col">Buy</th>
   </tr>
-    <tr *ngFor="let coupon of ourCoupons">
+    <tr *ngFor="let coupon of allCoupons">
         <td scope="row">{{ coupon.couponId }}</td>
         <td>{{ coupon.couponTitle }}</td>
         <td>{{ coupon.startDate }}</td>
@@ -25,6 +26,7 @@
         <td>{{ coupon.couponPrice }}</td>
         <td>{{ coupon.couponImage }}</td>
         <td>{{ coupon.companyId }}</td>
+        <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>  
         
     </tr>
         

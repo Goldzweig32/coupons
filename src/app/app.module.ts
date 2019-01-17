@@ -14,14 +14,25 @@ import { CreateCouponComponent } from './components/create-coupon/create-coupon.
 import { OurCouponsComponent } from './components/our-coupons/our-coupons.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 import { CustomerMenuComponent } from './components/customer-menu/customer-menu.component';
+import { UpdateProfileCustomerComponent } from './components/update-profile-customer/update-profile-customer.component';
+import { MyCouponsComponent } from './components/my-coupons/my-coupons.component';
+import { CouponsByCategoryComponent } from './components/coupons-by-category/coupons-by-category.component';
+import { CustomerCouponsComponent } from './components/customer-coupons/customer-coupons.component';
+import { CustomersHomeComponent } from './components/customers-home/customers-home.component';
 
 const routes: Routes = [
    { path: "", redirectTo:"home", pathMatch: "full"},
+    // { path: "login", component: LoginComponent}, 
    { path: "home", component: HomeComponent},
+   { path: "customersHome", component:CustomersHomeComponent},
    { path: "coupons", component: CouponsComponent},
+   { path: "CustomerCoupon", component:CustomerCouponsComponent},
    { path: "createCoupon", component: CreateCouponComponent},
    { path: "OurCoupons", component: OurCouponsComponent},
+   { path: "CouponsByCategory", component: CouponsByCategoryComponent},
+   { path: "MyCoupons", component: MyCouponsComponent},
    { path: "UpdateProfile", component: UpdateProfileComponent},
+   { path: "UpdateCustomerProfile", component: UpdateProfileCustomerComponent},
    { path: "about", component: AboutComponent}
 ];
 
@@ -38,7 +49,12 @@ const routes: Routes = [
   CreateCouponComponent,
   OurCouponsComponent,
   UpdateProfileComponent,
-  CustomerMenuComponent
+  CustomerMenuComponent,
+  UpdateProfileCustomerComponent,
+  MyCouponsComponent,
+  CouponsByCategoryComponent,
+  CustomerCouponsComponent,
+  CustomersHomeComponent
 ],
   imports: [
     BrowserModule,

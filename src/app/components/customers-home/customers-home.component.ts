@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Coupon } from 'src/app/models/coupon';
-import { CouponsService } from 'src/app/services/coupons.service';
 import { Title } from '@angular/platform-browser';
+import { CouponsService } from 'src/app/services/coupons.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-customers-home',
+  templateUrl: './customers-home.component.html',
+  styleUrls: ['./customers-home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class CustomersHomeComponent implements OnInit {
 
   public allCoupons: Coupon[];
 
@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.title.setTitle("Home");
     this.couponsService.getCoupons().subscribe(coupons => this.allCoupons = coupons);
+  }
+  
+  public purchaseCoupon(id:number):void{
+    this.couponsService.purchaseCoupon(id).subscribe(purchase => alert("Purchase Coupon successed"));
   }
 
 }

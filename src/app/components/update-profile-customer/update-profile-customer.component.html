@@ -1,0 +1,20 @@
+<div> 
+  <h2>Customer Number: {{ customer.customerId }}</h2>
+ <form #myForm="ngForm" (ngSubmit)="updateCustomer()">
+
+    <a>Customer Name:</a>
+    <input #name="ngModel" type="text" name="customerName" [(ngModel)]="customer.customerName" placeholder="Customer Name">
+    <br>
+
+    <a>Customer Password:</a>
+    <input #name="ngModel" type="text" name="customerPassword" [(ngModel)]="customer.customerPassword" placeholder="Customer Password">
+    <br>
+
+     <a>Customer Email:</a>
+    <input #name="ngModel" type="text" name="customerEmail" [(ngModel)]="customer.customerEmail" placeholder="Customer Email">
+    <br>
+
+    <button type="button" class="btn btn-success">Update</button>
+    
+  </form>
+</div>

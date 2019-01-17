@@ -13,10 +13,10 @@ export class RegisterService {
 
   public register(login: Login): Observable<UserId>{
     if (login.getUserType() == "COMPANY") {
-      alert("1");
+      
       return this.http.post<UserId>("http://localhost:8080/couponSpringV2/rest/companies",login,{ withCredentials: true});
     } else {
-      alert("2");
+      
       return this.http.post<UserId>("http://localhost:8080/couponSpringV2/rest/customers",login,{ withCredentials: true});
     }
     

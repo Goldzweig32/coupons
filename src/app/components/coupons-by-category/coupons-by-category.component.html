@@ -1,0 +1,260 @@
+<div *ngIf="vacationCoupons.length > 0">
+  <img id = myVacation src="/assets/images/vacation.png" width="imgWidth">
+  <h2 *ngIf="vacationCoupons">{{ vacationCoupons.length }} Coupons</h2>
+  <table class="table table-striped table-dark">
+    <tr>
+      <th scope="col">couponId</th>
+      <th scope="col">couponTitle</th>
+      <th scope="col">startDate</th>
+      <th scope="col">endDate</th>
+      <th scope="col">couponType</th>
+      <th scope="col">couponMessage</th>
+      <th scope="col">couponPrice</th>
+      <th scope="col">couponImage</th>
+      <th scope="col">companyId</th>
+      <th scope="col">Buy</th>
+    </tr>
+      <tr *ngFor="let coupon of vacationCoupons">
+        <td scope="row">{{ coupon.couponId }}</td>
+        <td>{{ coupon.couponTitle }}</td>
+        <td>{{ coupon.startDate }}</td>
+        <td>{{ coupon.endDate }}</td>
+        <td>{{ coupon.couponType }}</td>
+        <td>{{ coupon.couponMessage }}</td>
+        <td>{{ coupon.couponPrice }}</td>
+        <td>{{ coupon.couponImage }}</td>
+        <td>{{ coupon.companyId }}</td>
+        <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>   
+      </tr>
+        
+
+  </table>
+</div>
+<div *ngIf="foodCoupons.length > 0">
+    <img id = myFood src="/assets/images/food.png" width="imgWidth">
+    <h2 *ngIf="foodCoupons">{{ foodCoupons.length }} Coupons</h2>
+    <table class="table table-striped table-dark">
+      <tr>
+        <th scope="col">couponId</th>
+        <th scope="col">couponTitle</th>
+        <th scope="col">startDate</th>
+        <th scope="col">endDate</th>
+        <th scope="col">couponType</th>
+        <th scope="col">couponMessage</th>
+        <th scope="col">couponPrice</th>
+        <th scope="col">couponImage</th>
+        <th scope="col">companyId</th>
+        <th scope="col">Buy</th>
+      </tr>
+        <tr *ngFor="let coupon of foodCoupons">
+          <td scope="row">{{ coupon.couponId }}</td>
+          <td>{{ coupon.couponTitle }}</td>
+          <td>{{ coupon.startDate }}</td>
+          <td>{{ coupon.endDate }}</td>
+          <td>{{ coupon.couponType }}</td>
+          <td>{{ coupon.couponMessage }}</td>
+          <td>{{ coupon.couponPrice }}</td>
+          <td>{{ coupon.couponImage }}</td>
+          <td>{{ coupon.companyId }}</td>
+          <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>   
+        </tr>
+          
+  
+    </table>
+  </div>
+
+  <div *ngIf="sportsCoupons.length > 0">
+      <img id = mySports src="/assets/images/sports.png" width="imgWidth">
+      <h2 *ngIf="sportsCoupons">{{ sportsCoupons.length }} Coupons</h2>
+      <table class="table table-striped table-dark">
+        <tr>
+          <th scope="col">couponId</th>
+          <th scope="col">couponTitle</th>
+          <th scope="col">startDate</th>
+          <th scope="col">endDate</th>
+          <th scope="col">couponType</th>
+          <th scope="col">couponMessage</th>
+          <th scope="col">couponPrice</th>
+          <th scope="col">couponImage</th>
+          <th scope="col">companyId</th>
+          <th scope="col">Buy</th>
+        </tr>
+          <tr *ngFor="let coupon of sportsCoupons">
+            <td scope="row">{{ coupon.couponId }}</td>
+            <td>{{ coupon.couponTitle }}</td>
+            <td>{{ coupon.startDate }}</td>
+            <td>{{ coupon.endDate }}</td>
+            <td>{{ coupon.couponType }}</td>
+            <td>{{ coupon.couponMessage }}</td>
+            <td>{{ coupon.couponPrice }}</td>
+            <td>{{ coupon.couponImage }}</td>
+            <td>{{ coupon.companyId }}</td>
+            <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>   
+          </tr>
+      </table>
+    </div>
+
+    <div *ngIf="electricityCoupons.length > 0">
+        <img id = myVacation src="/assets/images/electricity.png" width="imgWidth">
+        <h2 *ngIf="electricityCoupons">{{ electricityCoupons.length }} Coupons</h2>
+        <table class="table table-striped table-dark">
+          <tr>
+            <th scope="col">couponId</th>
+            <th scope="col">couponTitle</th>
+            <th scope="col">startDate</th>
+            <th scope="col">endDate</th>
+            <th scope="col">couponType</th>
+            <th scope="col">couponMessage</th>
+            <th scope="col">couponPrice</th>
+            <th scope="col">couponImage</th>
+            <th scope="col">companyId</th>
+            <th scope="col">Buy</th>
+          </tr>
+            <tr *ngFor="let coupon of electricityCoupons">
+              <td scope="row">{{ coupon.couponId }}</td>
+              <td>{{ coupon.couponTitle }}</td>
+              <td>{{ coupon.startDate }}</td>
+              <td>{{ coupon.endDate }}</td>
+              <td>{{ coupon.couponType }}</td>
+              <td>{{ coupon.couponMessage }}</td>
+              <td>{{ coupon.couponPrice }}</td>
+              <td>{{ coupon.couponImage }}</td>
+              <td>{{ coupon.companyId }}</td>
+              <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>   
+            </tr>
+              
+      
+        </table>
+      </div>
+
+      <div *ngIf="resturantsCoupons.length > 0">
+          <img id = myResturants src="/assets/images/resturants.png" width="imgWidth">
+          <h2 *ngIf="resturantsCoupons">{{ resturantsCoupons.length }} Coupons</h2>
+          <table class="table table-striped table-dark">
+            <tr>
+              <th scope="col">couponId</th>
+              <th scope="col">couponTitle</th>
+              <th scope="col">startDate</th>
+              <th scope="col">endDate</th>
+              <th scope="col">couponType</th>
+              <th scope="col">couponMessage</th>
+              <th scope="col">couponPrice</th>
+              <th scope="col">couponImage</th>
+              <th scope="col">companyId</th>
+              <th scope="col">Buy</th>
+            </tr>
+              <tr *ngFor="let coupon of resturantsCoupons">
+                <td scope="row">{{ coupon.couponId }}</td>
+                <td>{{ coupon.couponTitle }}</td>
+                <td>{{ coupon.startDate }}</td>
+                <td>{{ coupon.endDate }}</td>
+                <td>{{ coupon.couponType }}</td>
+                <td>{{ coupon.couponMessage }}</td>
+                <td>{{ coupon.couponPrice }}</td>
+                <td>{{ coupon.couponImage }}</td>
+                <td>{{ coupon.companyId }}</td>
+                <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>    
+              </tr>
+                
+        
+          </table>
+        </div>      
+
+        <div *ngIf="healthCoupons.length > 0">
+            <img id = myHealth src="/assets/images/health.png" width="imgWidth">
+            <h2 *ngIf="healthCoupons">{{ healthCoupons.length }} Coupons</h2>
+            <table class="table table-striped table-dark">
+              <tr>
+                <th scope="col">couponId</th>
+                <th scope="col">couponTitle</th>
+                <th scope="col">startDate</th>
+                <th scope="col">endDate</th>
+                <th scope="col">couponType</th>
+                <th scope="col">couponMessage</th>
+                <th scope="col">couponPrice</th>
+                <th scope="col">couponImage</th>
+                <th scope="col">companyId</th>
+                <th scope="col">Buy</th>
+              </tr>
+                <tr *ngFor="let coupon of healthCoupons">
+                  <td scope="row">{{ coupon.couponId }}</td>
+                  <td>{{ coupon.couponTitle }}</td>
+                  <td>{{ coupon.startDate }}</td>
+                  <td>{{ coupon.endDate }}</td>
+                  <td>{{ coupon.couponType }}</td>
+                  <td>{{ coupon.couponMessage }}</td>
+                  <td>{{ coupon.couponPrice }}</td>
+                  <td>{{ coupon.couponImage }}</td>
+                  <td>{{ coupon.companyId }}</td>
+                  <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>   
+                </tr>
+                  
+          
+            </table>
+          </div>
+
+          <div *ngIf="campingCoupons.length > 0">
+              <img id = myCamping src="/assets/images/camping.png" width="imgWidth">
+              <h2 *ngIf="campingCoupons">{{ resturantsCoupons.length }} Coupons</h2>
+              <table class="table table-striped table-dark">
+                <tr>
+                  <th scope="col">couponId</th>
+                  <th scope="col">couponTitle</th>
+                  <th scope="col">startDate</th>
+                  <th scope="col">endDate</th>
+                  <th scope="col">couponType</th>
+                  <th scope="col">couponMessage</th>
+                  <th scope="col">couponPrice</th>
+                  <th scope="col">couponImage</th>
+                  <th scope="col">companyId</th>
+                  <th scope="col">Buy</th>
+                </tr>
+                  <tr *ngFor="let coupon of campingCoupons">
+                    <td scope="row">{{ coupon.couponId }}</td>
+                    <td>{{ coupon.couponTitle }}</td>
+                    <td>{{ coupon.startDate }}</td>
+                    <td>{{ coupon.endDate }}</td>
+                    <td>{{ coupon.couponType }}</td>
+                    <td>{{ coupon.couponMessage }}</td>
+                    <td>{{ coupon.couponPrice }}</td>
+                    <td>{{ coupon.couponImage }}</td>
+                    <td>{{ coupon.companyId }}</td>
+                    <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>    
+                  </tr>
+                    
+            
+              </table>
+            </div>
+
+            <div *ngIf="travellingCoupons.length > 0">
+                <img id = myTravelling src="/assets/images/travelling.png" width="imgWidth">
+                <h2 *ngIf="travellingCoupons">{{ travellingCoupons.length }} Coupons</h2>
+                <table class="table table-striped table-dark">
+                  <tr>
+                    <th scope="col">couponId</th>
+                    <th scope="col">couponTitle</th>
+                    <th scope="col">startDate</th>
+                    <th scope="col">endDate</th>
+                    <th scope="col">couponType</th>
+                    <th scope="col">couponMessage</th>
+                    <th scope="col">couponPrice</th>
+                    <th scope="col">couponImage</th>
+                    <th scope="col">companyId</th>
+                    <th scope="col">Buy</th>
+                  </tr>
+                    <tr *ngFor="let coupon of travellingCoupons">
+                      <td scope="row">{{ coupon.couponId }}</td>
+                      <td>{{ coupon.couponTitle }}</td>
+                      <td>{{ coupon.startDate }}</td>
+                      <td>{{ coupon.endDate }}</td>
+                      <td>{{ coupon.couponType }}</td>
+                      <td>{{ coupon.couponMessage }}</td>
+                      <td>{{ coupon.couponPrice }}</td>
+                      <td>{{ coupon.couponImage }}</td>
+                      <td>{{ coupon.companyId }}</td>
+                      <td><button type="button" class="btn btn-secondary" (click)="purchaseCoupon(coupon.couponId)">Buy</button></td>   
+                    </tr>
+                      
+              
+                </table>
+              </div>
