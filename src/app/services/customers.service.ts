@@ -17,7 +17,7 @@ export class CustomersService {
   // }
 
   public deleteCustomer(id:number):Observable<Customer>{
-    return this.http.delete<Customer>(this.url + "?id=" + id,{ withCredentials: true});
+    return this.http.delete<Customer>(this.url + "/" + id,{ withCredentials: true});
   }
 
   public updateCustomer(customer: Customer):Observable<Customer>{

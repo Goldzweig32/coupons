@@ -42,11 +42,11 @@ export class CouponsService {
   }
 
   public getCouponsUpToPrice(price: number):Observable<Coupon[]>{
-    return this.http.get<Coupon[]>(this.url + "/showCouponsUpToPrice?price=" + price,{ withCredentials: true});
+    return this.http.get<Coupon[]>(this.url + "/showCouponsUpToPrice/" + price,{ withCredentials: true});
   }
 
   public getCouponsUpToDate(couponEndDate: string):Observable<Coupon[]>{
-    return this.http.get<Coupon[]>(this.url + "/getCouponsUpToDate?couponEndDate=" + couponEndDate,{ withCredentials: true});
+    return this.http.get<Coupon[]>(this.url + "/getCouponsUpToDate/" + couponEndDate,{ withCredentials: true});
   }
 
   public getCouponsByCustomerId(customerId: number):Observable<Coupon[]>{

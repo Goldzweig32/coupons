@@ -17,7 +17,7 @@ export class CompaniesService {
   // }
 
   public deactivateCompany(id:number):Observable<Company>{
-    return this.http.delete<Company>(this.url + "/companies?id=" + id,{ withCredentials: true});
+    return this.http.delete<Company>(this.url + "/companies/" + id,{ withCredentials: true});
   }
 
   public updateCompany(company: Company):Observable<Company>{
