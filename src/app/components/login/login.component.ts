@@ -3,9 +3,10 @@ import { Login } from 'src/app/models/login';
 import { LoginService } from 'src/app/services/login.service';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
 import { LayoutComponent } from '../layout/layout.component';
 import { RegisterService } from 'src/app/services/register.service';
+import { ThrowStmt } from '@angular/compiler';
+import { NgbdModalBasic } from 'src/app/modal-basic';
 
 @Component({
   selector: 'app-login',
@@ -34,6 +35,12 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('user',JSON.stringify(this.login));
       sessionStorage.setItem('userType',this.login.getUserType());
       sessionStorage.setItem('isLoggedIn',"true");
+      if(this.login.getUserType() == "CUSTOMER"){
+        this.router.navigate(['customersHome']);
+      } else{
+        this.router.navigate(['home']);
+      }
+      
     })
      // this.router.navigate(['/home']);
     // this.router.navigateByUrl('/home');
@@ -47,7 +54,17 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('user',JSON.stringify(this.login));
       sessionStorage.setItem('userType',this.login.getUserType());
       sessionStorage.setItem('isLoggedIn',"true");
+      if(this.login.getUserType() == "CUSTOMER"){
+        this.router.navigate(['customersHome']);
+      } else{
+        this.router.navigate(['home']);
+      }
     })
+  }
+
+  public tryModal(): void{
+    
+
   }
    
     

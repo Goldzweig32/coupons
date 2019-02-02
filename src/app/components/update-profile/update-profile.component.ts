@@ -22,6 +22,6 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   public updateCompany(){
-    this.companiesService.updateCompany(this.company).subscribe(company => alert("Profile Updated Successfully"))
+    this.companiesService.updateCompany(this.company).subscribe(company => alert("Profile Updated Successfully"));
   }
 }

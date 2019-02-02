@@ -21,7 +21,7 @@ export class CustomersService {
   }
 
   public updateCustomer(customer: Customer):Observable<Customer>{
-    return this.http.put<Customer>(this.url,customer,{ withCredentials: true});
+    return this.http.put<Customer>(this.url + "/update",customer,{ withCredentials: true});
   }
 
   public getCustomers(): Observable<Customer[]>{

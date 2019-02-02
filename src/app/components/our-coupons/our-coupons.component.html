@@ -13,6 +13,8 @@
     <th scope="col">couponPrice</th>
     <th scope="col">couponImage</th>
     <th scope="col">companyId</th>
+    <th scope="col">Update</th>
+    <th scope="col">Delete</th>
   </tr>
     <tr *ngFor="let coupon of ourCoupons">
         <td scope="row">{{ coupon.couponId }}</td>
@@ -25,7 +27,8 @@
         <td>{{ coupon.couponPrice }}</td>
         <td>{{ coupon.couponImage }}</td>
         <td>{{ coupon.companyId }}</td>
-        
+        <td><button type="button" class="btn btn-secondary" (click)="updateCoupon(coupon.couponId)">Update</button></td>
+        <td><button type="button" class="btn btn-secondary" (click)="deleteCoupon(coupon.couponId)">Delete</button></td>
     </tr>
         
 

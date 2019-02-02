@@ -25,6 +25,11 @@ export class Coupon {
         this.companyId = id;
     }
 
-    
+    public getCouponId(): number{
+        return this.couponId;
+    }
 
+    public couponTypeToUpperCase(): void{
+        this.couponType = this.couponType.toUpperCase();
+    }
 }

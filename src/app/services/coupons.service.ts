@@ -22,7 +22,7 @@ export class CouponsService {
   }
 
   public deleteCoupon(id:number):Observable<Coupon>{
-    return this.http.delete<Coupon>(this.url + "/coupons?id=" + id,{ withCredentials: true});
+    return this.http.delete<Coupon>(this.url + "/" + id,{ withCredentials: true});
   }
 
   public updateCoupon(coupon: Coupon):Observable<Coupon>{

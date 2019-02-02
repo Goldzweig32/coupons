@@ -1,6 +1,6 @@
 <div> 
    <h2>Company Number: {{ company.companyId }}</h2>
-  <form #myForm="ngForm" (ngSubmit)="updateCompany()">
+  <form #myForm="ngForm">
  
      <a>Company Name:</a>
      <input #name="ngModel" type="text" name="companyName" [(ngModel)]="company.companyName" placeholder="Company Name">
@@ -21,7 +21,7 @@
     </select>
     <br>
 
-     <button>Update</button>
+     <button type="button" class="btn btn-success" (click)="updateCompany()">Update</button>
  
    </form>
  </div>

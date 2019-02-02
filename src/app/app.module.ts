@@ -19,6 +19,9 @@ import { MyCouponsComponent } from './components/my-coupons/my-coupons.component
 import { CouponsByCategoryComponent } from './components/coupons-by-category/coupons-by-category.component';
 import { CustomerCouponsComponent } from './components/customer-coupons/customer-coupons.component';
 import { CustomersHomeComponent } from './components/customers-home/customers-home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdModalBasic } from './modal-basic';
+import { UpdateCouponComponent } from './components/update-coupon/update-coupon.component';
 
 const routes: Routes = [
    { path: "", redirectTo:"home", pathMatch: "full"},
@@ -31,9 +34,11 @@ const routes: Routes = [
    { path: "OurCoupons", component: OurCouponsComponent},
    { path: "CouponsByCategory", component: CouponsByCategoryComponent},
    { path: "MyCoupons", component: MyCouponsComponent},
+   { path: "updateCoupon", component: UpdateCouponComponent},
    { path: "UpdateProfile", component: UpdateProfileComponent},
    { path: "UpdateCustomerProfile", component: UpdateProfileCustomerComponent},
    { path: "about", component: AboutComponent}
+   
 ];
 
 
@@ -54,14 +59,17 @@ const routes: Routes = [
   MyCouponsComponent,
   CouponsByCategoryComponent,
   CustomerCouponsComponent,
-  CustomersHomeComponent
+  CustomersHomeComponent,
+  NgbdModalBasic,
+  UpdateCouponComponent
 ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

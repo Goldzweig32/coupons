@@ -1,40 +1,38 @@
+<h1>
+  <img id = myRec src="/assets/images/update.png" width="imgWidth">
+</h1>
 <div> 
    
-  <form #myForm="ngForm" (ngSubmit)="createCoupon()">
+  <form #myForm="ngForm" (ngSubmit)="updateCoupon()">
  
+    <a>Coupon Title:</a>
      <input #name="ngModel" type="text" name="couponTitle" [(ngModel)]="coupon.couponTitle" placeholder="Coupon Title">
      <br>
- 
+
+     <a>End Date:</a>
      <input #name="ngModel" type="text" name="endDate" [(ngModel)]="coupon.endDate" placeholder="dd.mm.yyyy">
      <br>
  
+     <a>Amount:</a>
      <input #name="ngModel" type="number" name="amount" [(ngModel)]="coupon.amount" placeholder="Amount">
      <br>
 
-     <select #name="ngModel" [(ngModel)]="coupon.couponType" [ngModelOptions]="{standalone: true}">
-      <option value="VACATION">VACATION</option>
-      <option value="FOOD">FOOD</option>
-      <option value="ELECTRICITY">ELECTRICITY</option>
-      <option value="SPORTS">SPORTS</option>
-      <option value="RESTURANTS">RESTURANTS</option>
-      <option value="HEALTH">HEALTH</option>
-      <option value="CAMPING">CAMPING</option>
-      <option value="TRAVELLING">TRAVELLING</option>
-    </select>
-    <br>
-
+     <a>Coupon Message:</a>
      <input #name="ngModel" type="text" name="couponMessage" [(ngModel)]="coupon.couponMessage" placeholder="Coupon Message">
      <br>
 
+     <a>Coupon Price:</a>
      <input #name="ngModel" type="number" name="couponPrice" [(ngModel)]="coupon.couponPrice" placeholder="Price">
      <br>
 
+     <a>Coupon Image:</a>
      <input #name="ngModel" type="file" name="couponImage" [(ngModel)]="coupon.couponImage" placeholder="Coupon Image">
      <br>
     
-     <button>Create Coupon</button>
+     <button>Update Coupon</button>
  
    </form>
+
  </div>
 
 

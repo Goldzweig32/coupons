@@ -5,7 +5,7 @@
    <img id = logoImage src="/assets/images/bigwolf.png" width="imgWidth">
   
   
-  <form #myForm="ngForm" (ngSubmit)="loginMetod()">
+  <form #myForm="ngForm">
 
     <input #name="ngModel" type="email" name="userEmail" [(ngModel)]="login.userEmail" placeholder="Email">
     <br>
@@ -19,9 +19,15 @@
     </select>
     <br>
 
-    <button type="button" class="btn btn-success">Login</button>
+    <button type="button" class="btn btn-success" (click)="loginMetod()">Login</button>
     <br>
+
+    
     
   </form>
   <button id=regB type="button" class="btn btn-warning" (click)="registerMetod()" >Registration</button>
+  <br>
+  <br>
+  <ngbd-modal-basic></ngbd-modal-basic>
+    <br>
 </div>

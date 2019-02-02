@@ -21,7 +21,7 @@ export class CompaniesService {
   }
 
   public updateCompany(company: Company):Observable<Company>{
-    return this.http.put<Company>(this.url,company,{ withCredentials: true});
+    return this.http.put<Company>(this.url + "/update",company,{ withCredentials: true});
   }
 
   public getCompanies(): Observable<Company[]>{

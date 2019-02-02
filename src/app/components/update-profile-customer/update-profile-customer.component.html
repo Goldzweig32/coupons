@@ -1,6 +1,6 @@
 <div> 
   <h2>Customer Number: {{ customer.customerId }}</h2>
- <form #myForm="ngForm" (ngSubmit)="updateCustomer()">
+ <form #myForm="ngForm">
 
     <a>Customer Name:</a>
     <input #name="ngModel" type="text" name="customerName" [(ngModel)]="customer.customerName" placeholder="Customer Name">
@@ -14,7 +14,7 @@
     <input #name="ngModel" type="text" name="customerEmail" [(ngModel)]="customer.customerEmail" placeholder="Customer Email">
     <br>
 
-    <button type="button" class="btn btn-success">Update</button>
+    <button type="button" class="btn btn-success" (click)="updateCustomer()">Update</button>
     
   </form>
 </div>
