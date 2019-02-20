@@ -9,5 +9,13 @@ export class Login {
         return this.userType;
 
     }
+
+    public getUserEmail():string{
+        return this.userEmail;
+    }
+
+    public getUserPassword():string{
+        return this.userPassword;
+    }
    
 }

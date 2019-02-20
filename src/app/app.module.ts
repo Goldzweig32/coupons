@@ -22,10 +22,12 @@ import { CustomersHomeComponent } from './components/customers-home/customers-ho
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalBasic } from './modal-basic';
 import { UpdateCouponComponent } from './components/update-coupon/update-coupon.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
    { path: "", redirectTo:"home", pathMatch: "full"},
-    // { path: "login", component: LoginComponent}, 
+    // { path: "login", component: LoginComponent},
+    { path: "registration", component: RegistrationComponent},
    { path: "home", component: HomeComponent},
    { path: "customersHome", component:CustomersHomeComponent},
    { path: "coupons", component: CouponsComponent},
@@ -61,7 +63,8 @@ const routes: Routes = [
   CustomerCouponsComponent,
   CustomersHomeComponent,
   NgbdModalBasic,
-  UpdateCouponComponent
+  UpdateCouponComponent,
+  RegistrationComponent
 ],
   imports: [
     BrowserModule,

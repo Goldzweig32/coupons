@@ -39,20 +39,30 @@ input, button, select {
 }
 #regB{
     position: absolute;
-    left: 750px;
-    top: 685px;
+    left: 0px;
+    top: 240px;
     width: 400px;
     font-size: x-large;
     margin: 10px;
 }
-#dont{
+
+#logB{
     position: absolute;
-    left: 740px;
-    top: 650px;
-    width: 500px;
+    left: 750px;
+    top: 745px;
+    width: 400px;
     font-size: x-large;
     margin: 10px;
-    color:gold;  
+}
+
+#alre{
+    position: absolute;
+    left: 775px;
+    top: 710px;
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+    color: gold;
 }
 
 span {

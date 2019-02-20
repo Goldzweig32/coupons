@@ -1,8 +1,11 @@
 <!-- <div>
   <app-layout></app-layout>
 </div> -->
+<div *ngIf="isNeedRegistration()">
+  <app-registration></app-registration>
+</div>
 
-<div *ngIf="!isLoggin()">
+<div *ngIf="!isLoggin() && !isNeedRegistration()">
   <app-login></app-login>
 </div>
 

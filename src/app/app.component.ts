@@ -9,4 +9,9 @@ export class AppComponent {
   public isLoggin(): boolean{
     return JSON.parse(sessionStorage.getItem('isLoggedIn'));
   }
+
+  public isNeedRegistration(): boolean{
+      return JSON.parse(sessionStorage.getItem('needRegistration'));
+  }
 }
+

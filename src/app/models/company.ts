@@ -8,5 +8,17 @@ export class Company {
 	private  companyStatus?: string
     ){}
 
+    public setCompanyName(name:string){
+        this.companyName = name;
+    }
+
+    public setCompanyPassword(password:string){
+        this.companyPassword = password;
+    }
+
+    public setCompanyEmail(email:string){
+        this.companyEmail = email;
+    }
+
 }
 

@@ -1,0 +1,33 @@
+<div class="panel panel-default" [ngStyle]="{'background-image': 'url(/assets/images/background.jpg)'}" >
+  <!-- <div [ngStyle]="{'background-image': 'url(/assets/images/background.jpg)'}"> -->
+  <!-- <div [style.background]=" 'url(/assets/images/background.jpg)'"> -->
+    <img id = myImage src="/assets/images/wolf2.png" width="imgWidth">
+    <img id = logoImage src="/assets/images/bigwolf.png" width="imgWidth">
+   
+   
+   <form #myForm="ngForm">
+ 
+      <input #name="ngModel" type="text" name="userName" [(ngModel)]="userName" placeholder="Name">
+      <br>
+      
+     <input #name="ngModel" type="email" name="userEmail" [(ngModel)]="login.userEmail" placeholder="Email">
+     <br>
+ 
+     <input #name="ngModel" type="password" name="userPassword" [(ngModel)]="login.userPassword" placeholder="Password">
+     <br>
+ 
+     <select #name="ngModel" [(ngModel)]="login.userType" [ngModelOptions]="{standalone: true}">
+       <option value="CUSTOMER">Customer</option>
+       <option value="COMPANY">Company</option>
+     </select>
+     <br>
+     
+     
+     <button id=regB type="button" class="btn btn-warning" (click)="registerMetod()" >register</button>
+     <br>
+     
+   </form>
+   <p id=alre>Already registered? Click below</p>
+   <button id=logB type="button" class="btn btn-success" (click)="loginPage()">Login</button>
+   <br>
+ </div>

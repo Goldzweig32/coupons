@@ -46,28 +46,24 @@ export class LoginComponent implements OnInit {
     // this.router.navigateByUrl('/home');
   }
   
-  public registerMetod(): void{
-    let observable = this.registerService.register(this.login);
-    observable.subscribe(userId => {
-      alert("user created successfuly. ID: " + userId.id);
-      sessionStorage.setItem('id',JSON.stringify(userId.id));
-      sessionStorage.setItem('user',JSON.stringify(this.login));
-      sessionStorage.setItem('userType',this.login.getUserType());
-      sessionStorage.setItem('isLoggedIn',"true");
-      if(this.login.getUserType() == "CUSTOMER"){
-        this.router.navigate(['customersHome']);
-      } else{
-        this.router.navigate(['home']);
-      }
-    })
+  public registerPage(): void{
+    sessionStorage.setItem('needRegistration',"true");
+    this.router.navigate(['registration']);
+    // let observable = this.registerService.register(this.login);
+    // observable.subscribe(userId => {
+    //   alert("user created successfuly. ID: " + userId.id);
+    //   sessionStorage.setItem('id',JSON.stringify(userId.id));
+    //   sessionStorage.setItem('user',JSON.stringify(this.login));
+    //   sessionStorage.setItem('userType',this.login.getUserType());
+    //   sessionStorage.setItem('isLoggedIn',"true");
+    //   if(this.login.getUserType() == "CUSTOMER"){
+    //     this.router.navigate(['customersHome']);
+    //   } else{
+    //     this.router.navigate(['home']);
+    //   }
+    // })
   }
-
-  public tryModal(): void{
-    
-
-  }
-   
-    
+ 
 }
 
 
