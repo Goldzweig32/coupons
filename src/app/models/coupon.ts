@@ -1,3 +1,5 @@
+import { Company } from "./company";
+
 export class Coupon {
     
     public constructor(
@@ -10,7 +12,9 @@ export class Coupon {
         private couponMessage?: string,
         private couponPrice?: number,
         private couponImage?: string,
-        private companyId?: number
+        private companyId?: number,
+        private company?: Company
+        
     ){}
 
     public setStartDate(startDate: string){
