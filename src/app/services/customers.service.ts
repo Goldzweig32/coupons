@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CustomersService {
 
-  private url = "http://localhost:8080/couponSpringV2/rest/customers";
+  private url = "http://localhost:8080/couponsHibernate/rest/customers";
 
   constructor(private http: HttpClient) { }
 

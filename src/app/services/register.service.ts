@@ -21,13 +21,13 @@ export class RegisterService {
       this.company.setCompanyName(name);
       this.company.setCompanyEmail(login.getUserEmail());
       this.company.setCompanyPassword(login.getUserPassword());
-      return this.http.post<UserId>("http://localhost:8080/couponSpringV2/rest/companies/register",this.company,{ withCredentials: true});
+      return this.http.post<UserId>("http://localhost:8080/couponsHibernate/rest/companies/register",this.company,{ withCredentials: true});
     } 
     else {
       this.customer.setCustomerName(name);
       this.customer.setCustomerEmail(login.getUserEmail());
       this.customer.setCustomerPassword(login.getUserPassword());
-      return this.http.post<UserId>("http://localhost:8080/couponSpringV2/rest/customers/register",this.customer,{ withCredentials: true});
+      return this.http.post<UserId>("http://localhost:8080/couponsHibernate/rest/customers/register",this.customer,{ withCredentials: true});
     }
     
   }

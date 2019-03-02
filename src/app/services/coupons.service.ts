@@ -9,7 +9,7 @@ import { Coupon } from '../models/coupon';
 })
 export class CouponsService {
 
-  private url = "http://localhost:8080/couponSpringV2/rest/coupons";
+  private url = "http://localhost:8080/couponsHibernate/rest/coupons";
 
   constructor(private http: HttpClient) { }
 
