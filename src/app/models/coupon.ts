@@ -12,8 +12,7 @@ export class Coupon {
         private couponMessage?: string,
         private couponPrice?: number,
         private couponImage?: string,
-        private companyId?: number,
-        private company?: Company
+        private companyId?: number
         
     ){}
 
